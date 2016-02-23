@@ -1,0 +1,34 @@
+Merging:
+-------
+>>When you have your big feature implemented,u want to merge ur code back
+>>This means u ll take all the code u wrote in "A" into "master".
+>>switch to ur master branch and merge the "A" branch using 
+
+git merge A
+
+>>as u can see,our code was "fast-forward"
+   This means git did not create an own version of the source code.
+if we had modified something in master branch,and we merged then,git had to 
+merge the code together,which creates a commit.
+
+
+A --->  A------
+B       A'
+C       A''
+A''C<----------
+
+ And now u want to have A'' and C together.
+the ' means we modified something
+>git would take ur changes from A to A'
+>and your changs from A to c
+>and apply them to A=>A''C
+(which gives as a merge commit)
+
+>>>If u want to avoid these merge commits,you can do a rebase instead of merge.
+
+The result is quite same ,in background alot differs
+
+
+
+
+

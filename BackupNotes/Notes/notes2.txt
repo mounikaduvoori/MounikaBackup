@@ -1,0 +1,55 @@
+Tagging:
+--------
+>>A tag is something similar to a pointer.
+ex:
+---
+u hav got a commmit 
+3be565cb7
+
+this was the last commit inside a release or it was the first release candiadate
+ >>so u want to knw later which version it was
+
+>>if we want to see all similar tags foa a name.we type
+  'git tag -l release-candidate*'
+(to see all release candidate tags)
+
+>>> we can list all tags using 
+  'git tag -l'
+
+
+>>>we have to create a object to add more notes to a tag
+these tags save more than just a commit to wish they point
+
+>>>>They save
+    -who tagged the commit(tagger)
+    -when was the commit tagged?(date)
+    -a message
+ 
+
+>>lets create a tag for the first commit
+   we call the tag "init"
+
+<<<we create such "annotated" tags using the  -a
+switch behind git tag
+
+>>now vim opened
+
+>>>use the -m switch to set a msg
+
+>>we can use git show 
+  'git show $TAG/$ID'(to show a specific commit)
+
+>>so the output is 
+the commit id,
+THe author,
+the date,
+the msg, and diff to the previous commit
+(everything is green bcz this was the 1st commit)
+
+
+>>GIT knows now:
+init    -->the first commit
+release-candidate(important) -->the latest commit
+
+we can use them like IDs now:
+'git diff init Important'
