@@ -15,6 +15,7 @@ public class LinkedHashMapEx {
 	  }  
 	 }    
 }
+
 /*Output:
 100 A
 101 B

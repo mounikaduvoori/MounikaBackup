@@ -23,6 +23,7 @@ Let's see the old non-generic example of creating java collection.
 ArrayList al=new ArrayList();//creating old non-generic arraylist  
 Let's see the new generic example of creating java collection.
 
+
 ArrayList<String> al=new ArrayList<String>();//creating new generic arraylist  
 In generic collection, we specify the type in angular braces. Now ArrayList is forced 
 to have only specified type of objects in it. If you try to add another type of object, 

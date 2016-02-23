@@ -21,6 +21,7 @@ public class ArrayAndLinkedLists
 	  System.out.println("arraylist: "+al);  
 	  System.out.println("linkedlist: "+al2);  
 	 }       
+	 
 }
 /*  Output:
 arraylist: [Mouni, chinni, bujji, boochi]

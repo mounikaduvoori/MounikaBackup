@@ -15,6 +15,7 @@ public class HashMapEx
 	  }  
 	 }  
 }
+
 /*OUTPUT: 
 102 C
 100 A

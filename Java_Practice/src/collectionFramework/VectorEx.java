@@ -16,6 +16,7 @@ public class VectorEx
 	  }  
 	 }      
 }
+
 /*Output:
 A
 B

@@ -16,6 +16,7 @@ import java.util.*;
 	  }  
 	 }  	  
 }
+	
 /*Output:
 	bujji
 	boochi

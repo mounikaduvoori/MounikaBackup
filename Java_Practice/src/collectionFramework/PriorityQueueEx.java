@@ -32,6 +32,7 @@ public class PriorityQueueEx
 	}  	  
 	}   
 }
+
 /*Output:
 head:A
 head:A

@@ -18,6 +18,7 @@ import java.util.*;
 	 }  
 	}    
 }
+	
 /*Output:101
 	201
 	230

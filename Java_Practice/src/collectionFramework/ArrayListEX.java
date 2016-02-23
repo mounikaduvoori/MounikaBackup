@@ -17,6 +17,7 @@ public class ArrayListEX
 	  }  
 	 }  
 }
+
 /*OUTPUT:
 [Mouni, chinni, bujji, boochi]
 Mouni
