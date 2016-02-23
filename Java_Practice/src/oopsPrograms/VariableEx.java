@@ -11,15 +11,20 @@ public void var()
 	System.out.println(q);
 	
 }
-	public static void main(String[] args) {
-		System.out.println(c);
-	   // System.out.println(a);
+	public static void main(String[] args)
+	{
 		VariableEx v=new VariableEx ();
 		v.var();
+		
+	    v.a = 50;
+	    System.out.println(VariableEx.c);
+		System.out.println(v.a);
 	}
 
 }
-//Output:30
+/*Output:30
+        40
+        50 */
 
 //A variable that is declared inside the method is called local variable.
 /*A variable that is declared inside the class but outside the method is called 
