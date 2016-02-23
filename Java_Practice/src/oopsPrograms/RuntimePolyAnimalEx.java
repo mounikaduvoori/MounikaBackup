@@ -14,7 +14,7 @@ class Dog extends RuntimePolyAnimalEx{
    }  
 }  
 class BabyDog extends Dog
-{  
+  {  
 	void eat()
 	{
 		System.out.println("drinking milk");

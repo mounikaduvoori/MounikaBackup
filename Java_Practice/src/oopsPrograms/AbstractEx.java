@@ -22,6 +22,7 @@ abstract class AbstractEx implements A
 	 System.out.println("I am C");
    }  
 }  
+
 class M extends AbstractEx
 {  
 		public void a(){System.out.println("I am a");}  

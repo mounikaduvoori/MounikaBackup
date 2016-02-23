@@ -23,6 +23,7 @@ package oopsPrograms;
           }  
 		} 
 }
+
 */
 /*To reduce the complexity and simplify the language, multiple inheritance is not supported in java.
 Consider a scenario where A, B and C are three classes. The C class inherits MultipleInheritanceEx

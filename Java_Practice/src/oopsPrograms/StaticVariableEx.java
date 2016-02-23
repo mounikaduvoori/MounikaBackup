@@ -25,8 +25,7 @@ public class StaticVariableEx
 		   
 		   		s1.display();  
 		   		s2.display();  
-             }  
-		  
+             }  	  
 }
 
 /* Output:

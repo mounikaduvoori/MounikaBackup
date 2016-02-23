@@ -19,6 +19,7 @@ class Cat extends DynamicBindingAnimalEx
 		 a.eat();  
   }  		  
 }
+
   //Output:Cat is eating...
 
 /*In the above example object type cannot be determined by the compiler, because 

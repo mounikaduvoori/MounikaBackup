@@ -22,7 +22,6 @@ public class ConstructorEx
 	 }
 }
 
-
 /*Output:
 Example program for Constructor in java
 Duvoori MounikaReddy

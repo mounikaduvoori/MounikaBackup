@@ -20,8 +20,8 @@ public void var()
 	    System.out.println(VariableEx.c);
 		System.out.println(v.a);
 	}
-
 }
+
 /*Output:30
         40
         50 */

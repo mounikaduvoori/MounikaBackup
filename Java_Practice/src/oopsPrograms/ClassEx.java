@@ -12,7 +12,4 @@ public static void main(String []args)
 
 
 
-
-
-
 //output:Welcome to java

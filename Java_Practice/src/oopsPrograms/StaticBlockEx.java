@@ -9,8 +9,8 @@ public class StaticBlockEx
 		  }  
 		 
 }
-//Output:
 
+//Output:
 
 /* we execute a program without main() method
 

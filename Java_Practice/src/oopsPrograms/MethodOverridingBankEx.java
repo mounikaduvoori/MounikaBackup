@@ -40,6 +40,7 @@ class Test
 		System.out.println("AXIS Rate of Interest: "+a.getRateOfInterest());  
 		}  	 
 }
+
 /*Output:
 	SBI Rate of Interest: 8
 	ICICI Rate of Interest: 7

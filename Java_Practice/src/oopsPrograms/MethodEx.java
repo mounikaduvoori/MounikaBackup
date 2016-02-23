@@ -22,8 +22,7 @@ public class MethodEx
 	 MethodEx m=new MethodEx();
 	 m.add();
 	 m.sub();	
-	}
-	
+	}	
 }
 	/*output:
 Example program for Methods in java

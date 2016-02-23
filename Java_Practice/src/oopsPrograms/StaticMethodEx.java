@@ -38,6 +38,7 @@ public class StaticMethodEx
 	    }  
 }  
 
+
 /*Output:
 Chaitanya
 Example program for static method
