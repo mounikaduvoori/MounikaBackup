@@ -21,6 +21,7 @@ public class ThrowEx
 		      System.out.println("rest of the code...");  
     }  		 
 }
+
 /*Output:
 Exception in thread "main" java.lang.ArithmeticException: not valid
 at exceptionHandling.ThrowEx.validate(ThrowEx.java:8)

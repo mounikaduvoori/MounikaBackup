@@ -15,6 +15,7 @@ public class ExceptionMethodOverloadingEx
 	   p.msg();  
 	  } 
 }
+	
 //output:TestExceptionChild
 	
 //>>If the superclass method does not declare an exception, subclass overridden method 

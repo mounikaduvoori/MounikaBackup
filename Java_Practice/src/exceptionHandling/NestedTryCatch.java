@@ -31,9 +31,9 @@ public class NestedTryCatch
 			  System.out.println("handeled");}  
 		  
 		  System.out.println("normal flow..");  
-		 }  
-		  
+		 }  		  
 }
+
 /*Output:
 going to divide
 java.lang.ArithmeticException: / by zero

@@ -21,8 +21,8 @@ public class MultipleTryCatch1
 			   }  
 		   System.out.println("rest of the code...");  
 		 }  */
-		 
 }
+
   /*output:
 Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
 Unreachable catch block for ArithmeticException. It is already handled by the catch block for Exception
