@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Specify the test suite name -->
+
+<suite name="Regression_TestSuite" verbose="1" annotations="JDK">
+	<!-- Specify the test name -->
+	<test name="Regression Tests" preserve-order="true">
+			<classes>
+			 <class name="com.qa.rgn.ContestSetupEditableValidation">
+				<methods>
+			
+				  <include name="login"/> 
+				   <include name="verify_contestPageandBtns"/> 			  
+				    <include name="contestSetup_Editable_WOstartDate"/> 
+				     <include name="contestSetup_Editable_WOendDate"/> 
+				      <include name="contestSetup_Editable_WOcontestName"/> 
+				       <include name="contestSetup_Editable_Blankdata"/>  	
+				        <include name="contestSetup_Editable_WithMultipleEntries"/> 
+				         <include name="contestSetup_Editable_verifyNeverends"/> 
+				          <include name="contestSetupEditable"/> 
+				           <include name=""/> 
+				            <include name=""/> 
+				          
+				        
+				</methods>
+			</class>
+						
+		</classes>
+	</test>	
+	<listeners>
+		<listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
+		<listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
+		<listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
+	</listeners> 
+</suite>
