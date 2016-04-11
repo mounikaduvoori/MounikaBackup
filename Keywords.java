@@ -12,14 +12,6 @@ import static org.monte.media.VideoFormatKeys.ENCODING_AVI_TECHSMITH_SCREEN_CAPT
 import static org.monte.media.VideoFormatKeys.QualityKey;*/
 import static org.testng.Assert.fail;
 
-
-
-
-
-
-
-
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -27,15 +19,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-/*import java.util.concurrent.TimeUnit;*/
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-/*import org.apache.log4j.Logger;*/
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -53,16 +44,6 @@ import atu.testng.reports.logging.LogAs;
 import atu.testng.selenium.reports.CaptureScreen;
 import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
 
-
-/*import java.awt.AWTException;
-import java.awt.GraphicsConfiguration;
-import java.awt.GraphicsEnvironment;
-import org.monte.media.Format;
-import org.monte.media.FormatKeys.MediaType;
-import org.monte.media.math.Rational;
-import org.monte.screenrecorder.ScreenRecorder;
-*/
-
 public class Keywords {
 
 	public static String testName;
@@ -79,14 +60,10 @@ public class Keywords {
 /*	private static Logger logs = Logger.getLogger("keywords.class");*/
 	
 	
-	public Keywords(WebDriver driver){
+	public Keywords(WebDriver driver)
+	{
 		this.driver = driver;
 	}
-
-	
-	  
-
-
 
 	public String date1() 
 	{ // Universal Timing format GMT
@@ -98,29 +75,6 @@ public class Keywords {
 		return date;
 	}
 
-public String startdate()
-{
-	DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");
-	 
-	 //get current date time with Date()
-	 Date sdate = new Date();
-	 
-	 // Now format the date
-	 String st_date1= dateFormat.format(sdate);
-	return  st_date1; 
-}
-
-public String enddate()
-{
-		String myformat = "MM/dd/yyyy";
-		Calendar cal = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat(myformat);
-		cal.add(Calendar.DATE, 10);;
-		String edate = sdf.format(cal.getTime());
-		//System.out.println(date2);
-		return edate; 
-}
-
 	public static String date2() { // local Time Format
 		String myformat = "dd_MM_yyyy_HH_mm_ss";
 		Calendar cal = Calendar.getInstance();
@@ -129,44 +83,8 @@ public String enddate()
 		//System.out.println(date2);
 		return date;
 	}
-
-	public void linkInNewWIndow(By object) throws Exception{
-		Actions action = new Actions(driver);
-		WebElement link =driver.findElement(object);
-		
-		//newTab.keyDown(Keys.SHIFT).contextClick(link).keyUp(Keys.SHIFT).build().perform();
-		action.contextClick(link).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
-		Thread.sleep(5000);
-	}
-		
-	public  String getMainWindowHandle(WebDriver driver) {
-		return driver.getWindowHandle();
-	}
-	public  String getCurrentWindowTitle() {
-		String windowTitle = driver.getTitle();
-		return windowTitle;
-	}
-	/*public void AtuConfig()
-	{
-        System.setProperty("atu.reporter.config", "..\\Presslaf\\properties\\atu.properties");
-
-    }*/
-	//private Date date = new Date();
-	//private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH_mm_ss");
-
-
-
-	/*static int IncSS = 1;
-	public void TakeScreenshot(String Filename) throws Exception	{
-		try{
-			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(scrFile, new File("D:\\Presslaf\\Presslaf\\screenshots"+IncSS+Filename+".png"));
-		}catch (Exception e)
-		{   System.out.println(" Cannot Take Screen shot "+e);
-		logs.debug("Cannot Take Screen shot ");
-		}
-		IncSS++;
-	}*/
+    
+	
 	static int IncSS = 1;
 	
 	public void TakeScreenshot(String Filename) throws Exception	{
@@ -205,7 +123,91 @@ public String enddate()
 		IncSS++;
 	}
 
-	public String getTimeStamp() {
+	public String startdate()
+	{
+		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");	 
+
+		 //get current date time with Date()
+		 Date sdate = new Date();	 
+
+		 // Now format the date
+		 String st_date1= dateFormat.format(sdate);
+		return  st_date1; 
+	}
+
+	public String enddate()
+	{
+			String myformat = "MM/dd/yyyy";
+			Calendar cal = Calendar.getInstance();
+			SimpleDateFormat sdf = new SimpleDateFormat(myformat);
+			cal.add(Calendar.DATE, 10);;
+			String edate = sdf.format(cal.getTime());
+			//System.out.println(date2);
+			return edate; 
+	}
+	public void linkInNewWIndow(By object) throws Exception{
+		Actions action = new Actions(driver);
+		WebElement link =driver.findElement(object);
+		
+		//newTab.keyDown(Keys.SHIFT).contextClick(link).keyUp(Keys.SHIFT).build().perform();
+		action.contextClick(link).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+		Thread.sleep(5000);
+	}
+		
+	public  String getMainWindowHandle(WebDriver driver) {
+		return driver.getWindowHandle();
+	}
+	public  String getCurrentWindowTitle() {
+		String windowTitle = driver.getTitle();
+		return windowTitle;
+	}
+	
+	public boolean isSelected(By object) throws Exception {
+		try {
+	        driver.findElement(object).isSelected();
+	        System.out.println("Element is selected");
+	        return true;
+	    } 
+
+	   catch (Exception e) {
+	        System.out.println("Element is not selected");
+	        return false;
+	    }
+		
+	}
+	
+
+public void doubleclick(By object) throws Exception
+{
+	try{
+		Actions action = new Actions(driver);
+		WebElement element=driver.findElement(object);
+
+		//Double click
+		action.doubleClick(element).perform();
+	}catch (Exception e) {}
+}
+
+
+
+	
+	public void switchToWindow() throws Exception{
+		
+			String parentWindow = driver.getWindowHandle();
+			Set<String> handles =  driver.getWindowHandles();
+			   for(String windowHandle  : handles)
+			       {
+			       if(!windowHandle.equals(parentWindow))
+			          {
+			          driver.switchTo().window(windowHandle);
+			       //Perform your operation here for new window-->
+			          Thread.sleep(3000);
+			          driver.manage().window().maximize();
+			          }
+			       }
+	}
+	
+	private String getTimeStamp() {
 		
 		DateFormat dateFormat = new SimpleDateFormat("MM_dd_yy_HH_mm_ss");
 		Calendar cal = Calendar.getInstance();
@@ -228,7 +230,7 @@ public String enddate()
 		try{
 			driver.findElement(object).click();
 			Thread.sleep(1000);	
-			
+			//TakeScreenshot(testName+"_StepName_"+stepName+date1());
 			/*ATUReports.add(stepDescription,inputvalue,Expected,Actual,LogAs.PASSED, new CaptureScreen(
 	                ScreenshotOf.BROWSER_PAGE));*/
 			/*String exp=object.toString();
@@ -308,7 +310,7 @@ public String enddate()
 			String exp=object.toString();
 			ATUReports.add("Type Vale","Type","type"+data,"Not found Element"+exp, LogAs.FAILED, new CaptureScreen(
                     ScreenshotOf.DESKTOP));
-			TakeScreenshot("ERROR_TestName-"+testName+"_StepName-"+stepName+date1());
+			//TakeScreenshot("ERROR_TestName-"+testName+"_StepName-"+stepName+date1());
 		/*	logs.error("Element is not found");*/
 		}
 	}
@@ -540,46 +542,7 @@ public String enddate()
 		}
 	}
 
-	public boolean isverifyElementAbsent(By object) throws Exception {
-	    try {
-	        driver.findElement(object);
-	        System.out.println("Element Present");
-	        return false;
-	    } 
 
-	   catch (NoSuchElementException e) {
-	        System.out.println("Element absent");
-	        return true;
-	    }
-	}
-	
-	/*public boolean isDisabled(By object) throws Exception {
-		
-		try {
-	        driver.findElement(object);
-	        System.out.println("Element Enabled");
-	        return false;
-	    } 
-
-	   catch (NoSuchElementException e) {
-	        System.out.println("Element Disabled");
-	        return true;
-	    }
-	}*/
-	
-	public boolean isSelected(By object) throws Exception {
-		try {
-	        driver.findElement(object).isSelected();
-	        System.out.println("Element is selected");
-	        return true;
-	    } 
-
-	   catch (NoSuchElementException e) {
-	        System.out.println("Element is not selected");
-	        return false;
-	    }
-		
-	}
 	public void waitForElementPresent(By object) {
 		System.out.println("wait for Xpath element present is reached");
 		for (int second = 0;; second++) {
@@ -595,16 +558,7 @@ public String enddate()
 		System.out.println("wait for Xpath element present is reached");
 	}
 
-public void doubleclick(By object) throws Exception
-{
-	try{
-		Actions action = new Actions(driver);
-		WebElement element=driver.findElement(object);
 
-		//Double click
-		action.doubleClick(element).perform();
-	}catch (Exception e) {}
-}
 
 
 	public void SwitchToWindow(int index) throws Exception {	
@@ -619,22 +573,8 @@ public void doubleclick(By object) throws Exception
 			/*logs.error("window is not found");*/
 		}
 	}
-	
-	public void switchToWindow() throws Exception{
-		
-			String parentWindow = driver.getWindowHandle();
-			Set<String> handles =  driver.getWindowHandles();
-			   for(String windowHandle  : handles)
-			       {
-			       if(!windowHandle.equals(parentWindow))
-			          {
-			          driver.switchTo().window(windowHandle);
-			       //Perform your operation here for new window-->
-			          Thread.sleep(3000);
-			          driver.manage().window().maximize();
-			          }
-			       }
-	}
+
+
 	/*public void SwitchToFrame(String object) throws Exception {
 	
 		logs.debug("Executing___"+testName+"___"+stepName);
@@ -651,15 +591,15 @@ public void doubleclick(By object) throws Exception
 	}	
 */
 
-	public void SwitchToFrame(WebElement FrameName) throws Exception {
+	public void SwitchToFrame(Object object) throws Exception {
 		/*logs.debug("Executing___"+testName+"___"+stepName);*/
 		try{
-			driver.switchTo().frame(FrameName);
+			driver.switchTo().frame((int) object);
 			//TakeScreenshot("TestName-"+testName+"_StepName-"+stepName+date1());
-			// SwitchToWindow(0); // to use 	
+			SwitchToWindow(0); // to use 	
 		}catch(Exception e){
 			TakeScreenshot("ERROR_TestName-"+testName+"_StepName-"+stepName+date1());
-			//System.out.println("Element is not found");
+			System.out.println("Element is not found");
 		/*	logs.error("Element is not found");*/
 		}
 
